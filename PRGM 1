@@ -1,0 +1,10 @@
+var names = new[]
+{
+    "Ana",
+    "Emillia"
+};
+
+foreach (var name in names)
+{
+    Console.WriteLine($"Hello {name}");
+}
