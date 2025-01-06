@@ -1,0 +1,13 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string str = "madam";
+        string reversed = new string(str.Reverse().ToArray());
+        if (str == reversed)
+            Console.WriteLine("Palindrome");
+        else
+            Console.WriteLine("Not Palindrome");
+    }
+}
