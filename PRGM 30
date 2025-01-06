@@ -1,0 +1,12 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string sentence = "Hello, how are you?";
+        int wordCount = sentence.Split(' ').Length;
+
+        Console.WriteLine("Word count: " + wordCount);
+    }
+}
