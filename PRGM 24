@@ -1,0 +1,15 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num = 12345, reversed = 0;
+        while (num != 0)
+        {
+            int remainder = num % 10;
+            reversed = reversed * 10 + remainder;
+            num /= 10;
+        }
+        Console.WriteLine("Reversed Number: " + reversed);
+    }
+}
