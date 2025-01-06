@@ -1,0 +1,16 @@
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        // Writing to a file
+        string path = "example.txt";
+        File.WriteAllText(path, "Hello, this is a test file.");
+
+        // Reading from a file
+        string content = File.ReadAllText(path);
+        Console.WriteLine("File content: " + content);
+    }
+}
