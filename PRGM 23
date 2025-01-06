@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string str = "hello";
+        int length = str.Length;
+        if (length % 2 == 1)
+        {
+            Console.WriteLine("Middle Character: " + str[length / 2]);
+        }
+        else
+        {
+            Console.WriteLine("No single middle character");
+        }
+    }
+}
