@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static int LCM(int a, int b)
+    {
+        return (a * b) / GCD(a, b);
+    }
+
+    static int GCD(int a, int b)
+    {
+        if (b == 0) return a;
+        return GCD(b, a % b);
+    }
+
+    static void Main()
+    {
+        int num1 = 4, num2 = 6;
+        Console.WriteLine("LCM: " + LCM(num1, num2));
+    }
+}
