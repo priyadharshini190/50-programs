@@ -1,0 +1,9 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num1 = 5, num2 = 10;
+        Console.WriteLine("Sum: " + (num1 + num2));
+    }
+}
