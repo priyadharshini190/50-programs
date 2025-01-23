@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter size of first array: ");
+        int size1 = int.Parse(Console.ReadLine());
+        int[] arr1 = new int[size1];
+        
+        Console.WriteLine("Enter elements of first array:");
+        for (int i = 0; i < size1; i++)
+        {
+            Console.Write($"Element {i + 1}: ");
+            arr1[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.Write("Enter size of second array: ");
+        int size2 = int.Parse(Console.ReadLine());
+        int[] arr2 = new int[size2];
+        
+        Console.WriteLine("Enter elements of second array:");
+        for (int i = 0; i < size2; i++)
+        {
+            Console.Write($"Element {i + 1}: ");
+            arr2[i] = int.Parse(Console.ReadLine());
+        }
+
+        int[] mergedArr = new int[size1 + size2];
+        arr1.CopyTo(mergedArr, 0);
+        arr2.CopyTo(mergedArr, size1);
+
+        Console.WriteLine("Merged Array: " + string.Join(", ", mergedArr));
+    }
+}
