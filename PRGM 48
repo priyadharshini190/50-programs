@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter array size: ");
+        int size = int.Parse(Console.ReadLine());
+
+        int[] arr = new int[size];
+        int evenSum = 0, oddSum = 0;
+
+        Console.WriteLine("Enter array elements:");
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Element {i + 1}: ");
+            arr[i] = int.Parse(Console.ReadLine());
+
+            if (arr[i] % 2 == 0)
+                evenSum += arr[i];
+            else
+                oddSum += arr[i];
+        }
+
+        Console.WriteLine($"Sum of Even Numbers: {evenSum}");
+        Console.WriteLine($"Sum of Odd Numbers: {oddSum}");
+    }
+}
