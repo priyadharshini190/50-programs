@@ -1,0 +1,53 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal balance = 1000.00m;
+        int option;
+
+        do
+        {
+            Console.WriteLine("\nATM Menu:");
+            Console.WriteLine("1. View Balance");
+            Console.WriteLine("2. Deposit");
+            Console.WriteLine("3. Withdraw");
+            Console.WriteLine("4. Exit");
+            Console.Write("Choose an option: ");
+            option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine($"Your balance is {balance:C}");
+                    break;
+                case 2:
+                    Console.Write("Enter deposit amount: ");
+                    decimal deposit = decimal.Parse(Console.ReadLine());
+                    balance += deposit;
+                    Console.WriteLine($"Deposited {deposit:C}. New balance: {balance:C}");
+                    break;
+                case 3:
+                    Console.Write("Enter withdrawal amount: ");
+                    decimal withdraw = decimal.Parse(Console.ReadLine());
+                    if (withdraw <= balance)
+                    {
+                        balance -= withdraw;
+                        Console.WriteLine($"Withdrawn {withdraw:C}. New balance: {balance:C}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Insufficient funds.");
+                    }
+                    break;
+                case 4:
+                    Console.WriteLine("Exiting... Have a nice day!");
+                    break;
+                default:
+                    Console.WriteLine("Invalid option. Try again.");
+                    break;
+            }
+        } while (option != 4);
+    }
+}
